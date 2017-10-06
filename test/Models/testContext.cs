@@ -14,7 +14,12 @@ namespace test.Models
         // automatically whenever you change your model schema, please use data migrations.
         // For more information refer to the documentation:
         // http://msdn.microsoft.com/en-us/data/jj591621.aspx
-    
+
+       protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            //Configure default schema
+            modelBuilder.HasDefaultSchema("DIEGO");
+        }
         public testContext() : base("name=testContext")
         {
         }

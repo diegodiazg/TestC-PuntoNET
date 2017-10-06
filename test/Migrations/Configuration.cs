@@ -9,8 +9,9 @@ namespace test.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
+     
 
         protected override void Seed(test.Models.testContext context)
         {
